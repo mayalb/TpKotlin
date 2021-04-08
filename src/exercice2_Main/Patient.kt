@@ -20,4 +20,10 @@ class Patient(
         private val bloodType:String,
         private val personlDesease:String)
     :User(userId, firstName, lastName, userName, password, birthdate, address, gender, phone, email){
+        fun getIdPatient():String{
+            return this.userId
+        }
+    fun getNameuser():String{
+        return this.firstName
+    }
 }

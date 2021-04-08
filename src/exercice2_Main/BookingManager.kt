@@ -5,6 +5,9 @@ class BookingManager {
         var listbooking=Singleton.getbookinglist()
         listbooking.add(booking)
     }
+    fun getbooking():Booking{
+        return Singleton.getbooking()
+    }
     fun getBookingByPatient(patient:Patient):List<Booking>{
         var listbooking=Singleton.getbookinglist()
         var list= arrayListOf<Booking>()

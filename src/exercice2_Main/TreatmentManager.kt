@@ -11,25 +11,22 @@ class TreatmentManager {
         var listtraitement=Singleton.gettreatementlist()
         var list= arrayListOf<Treatment>()
         for(treatement in listtraitement){
-            if(treatement.getpatient().equals(patient)){
+            if(treatement.getbooking().getpatient().equals(patient)){
                 list.add(treatement)
             }
         }
         return list
     }
-    fun getLastTreatment(patient:Patient):Treatment?{
-       var listtraitement=Singleton.gettreatementlist()
-        var date=LocalDate.of(0,0,0)
-        var result:Treatment?=null
-
+    fun getLastTreatment(patient:Patient):Treatment{
+       var listtraitement=this.getTreatmentsByPatient(patient)
+        var date=LocalDate.of(0,1,1)
+       var result=this.getTreatmentsByPatient(patient)[0]
         for(treatement in listtraitement){
-            if(treatement.getpatient().equals(patient)){
                 if(treatement.getTreatmentDate()>date){
                     date=treatement.getTreatmentDate()
                     result=treatement
-                }
 
-            }
+                }
         }
         return result
     }

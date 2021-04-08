@@ -12,6 +12,9 @@ class Booking(private val bookingId:Long,private val bookingDate:LocalDate,priva
     fun getdoctor():Doctor{
         return  this.doctor
     }
+    fun getidbooking():Long{
+        return this.bookingId
+    }
 
 
 

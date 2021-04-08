@@ -18,5 +18,11 @@ class Doctor(
         private val longitude:Double,
         private val facebookPage:String,
         private val speciality:String) :User(userId, firstName, lastName, userName, password, birthdate, address, gender, phone, email){
+            fun getiddoctor():String{
+                return this.userId
+            }
+    fun getnamedoctor():String{
+        return this.firstName
+    }
 
 }

@@ -9,14 +9,18 @@ class Treatment(
         private val disease:String,
         private val treatmentDescription:String,
         private val treatmentDate:LocalDate,
-        private val patient: Patient
+      //  private val patient: Patient,
+        private val booking: Booking
 ) {
     //when create treatement we should create booking
-  fun getpatient():Patient{
-      return this.patient
+  fun getbooking():Booking{
+      return this.booking
   }
     fun getTreatmentDate():LocalDate{
         return this.treatmentDate
+    }
+    fun getTreatementId():Long{
+        return this.treatmentId
     }
 
 
